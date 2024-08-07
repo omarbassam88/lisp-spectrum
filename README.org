@@ -1,0 +1,90 @@
+#+title: The Lisp Spectrum
+#+author: Omar Bassam
+#+date: [2024-08-07 Wed]
+#+startup:  nonum
+
+This project aims to explore the extensive spectrum of the Lisp family of languages. Lisp is renowned for its high flexibility and great control, offering programmers a powerful toolset. However, the abundance of available options can be overwhelming, leading to choice fatigue. Therefore, this project seeks to compile essential information about the major Lisp dialects, detailing their unique features, tools, and learning resources.
+
+The Lisps we will be exploring:
+- Common Lisp
+- Scheme
+  - Chez Scheme
+    - Racket
+  - Chicken Scheme
+  - Gambit Scheme
+    - Gerbil Scheme
+  - Guile Scheme
+- Clojure
+  - ClojureScript
+  - Fennel
+
+Here's a simple diagram showing the family tree of these lisps and how do they relate to each other
+#+begin_src mermaid
+flowchart TD
+    A(Lisp) --> B(Common Lisp)
+    A --> S(Scheme)
+    A --> J(Clojure)
+    S --> E(Chez)
+    E --> R(Racket)
+    S --> I(Chicken)
+    S --> G(Gambit)
+    G --> L(Gerbil)
+    S --> Y(Guile)
+
+#+end_src
+
+* Why Lisps
+** Syntax
+Lisp has a simple syntax that can be learned in a day. All code is written as expressions, known as S-Expressions, which are lists with prefix notation. The first element is the operator, and the rest are arguments.
+
+#+begin_src lisp
+(+ 1 2 3 4)
+(list 1 2 (list 3 4))
+(defun foo (a b c d) (+ a b c d))
+#+end_src
+
+** REPL
+The REPL is a major selling point for Lisp, allowing for interactive, incremental program development. This feature has influenced many modern languages to offer similar interactive experiences.
+** Code as data
+Lisp code has the same structure as lists, enabling the creation of macros with list-processing functions. This facilitates the development of Domain-Specific Languages (DSLs).
+* Lisp Resources
+- [[http://www-formal.stanford.edu/jmc/recursive.pdf][John McCarthy Original Paper on LISP: Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I]]
+- [[https://www.softwarepreservation.org/projects/LISP/book/LISP%201.5%20Programmers%20Manual.pdf][Lisp 1.5 Manual]]
+- [[https://web.mit.edu/6.001/6.037/sicp.pdf][Book: Structure and Interpretation of Computer Programs]]
+* Comparison Criteria
+** Installation and Setup
+We explore the different ways of installing every lisp such as:
+- The availability of official packages in different package managers.
+- Install from a script.
+- Installing from source code.
+
+We will also look into the first time setup for every lisp.
+** Resources
+The availability of learning resources is crucial for any programming language. We will try to gather the most helpful resources for every lisp including:
+- Documentation
+- Books
+- Videos
+- Tutorials
+- Community channels
+
+** REPL
+Ease and speed of interacting with the REPL, including the possibility of connecting to a remote REPL.
+
+** Editor Integration
+While Emacs is the de facto standard for working with Lisps, some have their own IDEs (e.g., Dr. Racket for Racket) or support through plugins in other editors. We will explore available editor options for each Lisp.
+
+** Package and Project management
+- Tools for managing packages and projects.
+- Ease of installing/uninstalling packages.
+- Possibility of installing a specific version for a package.
+- Package installation scopes (global, project-level, or both).
+
+** Standard Library and Ecosystem
+We will discuss the built-in libraries for each Lisp and their usability. Additionally, we will explore the ecosystem for each Lisp, including where to find and download packages.
+
+** Performance
+This is very subjective as every lisp compiles to a different target(s). So, it's hard to decide whether the comparison of performance is between the lisp implementations or the target platforms. 
+
+** Interoperability with target platform(s)
+Most lisps offer a way of interoperability with their target platform(s) or with other platforms as well. This can differ from one lisp to another, so this won't be a comparison but rather exploring the different options.
+
