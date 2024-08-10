@@ -1,0 +1,154 @@
+#+title: Common Lisp
+#+author: Omar Bassam
+#+date: [2024-08-08 Wed]
+#+startup:  nonum
+
+Common Lisp is the modern, multi-paradigm, high-performance, compiled, ANSI-standardized, most prominent (along with Scheme) descendant of the long-running family of Lisp programming languages.
+
+* Resources
+** Documentation
+- [[https://www.lispworks.com/documentation/HyperSpec/Front/Contents.htm][LispWorks HyperSpec]]
+- [[http://novaspec.org/cl/][Nova Spec]] (a nicer alternative to HyperSpec)
+- [[https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node1.html][Common Lisp the Language 2nd edition]]
+- [[https://lispcookbook.github.io/cl-cookbook/][The Common Lisp Cook Book]]
+
+** Books
+- [[https://gigamonkeys.com/book/][Practical Common Lisp]]
+- [[http://www.paulgraham.com/acl.html][ANSI Common Lisp Paul Graham]]
+- [[https://leanpub.com/lovinglisp/read#leanpub-auto-cover-material-copyright-and-license][Loving Common Lisp, or the Savvy Programmer's Secret Weapon]]
+
+** Videos
+- [[https://www.youtube.com/watch?v=4NO83wZVT0A&t=1789s][Practical Common Lisp]]
+- [[https://www.youtube.com/watch?v=IrmHp1rRQ68][Common Lisp Object Standard]]
+
+** Community
+- [[https://www.reddit.com/r/Common_Lisp/][Common Lisp Subreddit]]
+
+* Implementations
+Common lisp is just a standard, you will need to choose the implementation(s) according to your needs. Below is a simple table that gives you a brief idea of the implementations available. 
+
+| Implementation | Installation          | Target(s)     | License       |
+|----------------+-----------------------+---------------+---------------|
+| SBCL           | apt,pacman ,nix, guix | Machine Code  | Public Domain |
+| ABCL           | apt,pacman ,nix, guix | JVM byte code | GNU GPL3      |
+| Clozure (CCL)  |                       | native code   | LLGPL         |
+| ECL            | apt, nix, guix        | C             | GNU LGPL2.1   |
+| CLASP          |                       | LLVM          | LGPL2.1       |
+| LispWorks      |                       |               | Proprietary   |
+| Allegro        |                       |               | Proprietary   |
+| CLISP          |                       |               |               |
+| SICL           |                       |               |               |
+
+** Steel Bank Common Lisp (SBCL)
+- [[https://www.sbcl.org/][Official website]]
+** ARmedear Common Lisp (ABCL) 
+- [[https://armedbear.common-lisp.dev][Official website]]
+** Clozure CL (CCL)
+- [[https://ccl.clozure.com/][Official website]]
+** ECL
+- [[https://ecl.common-lisp.dev/main.html][Official Website]]
+** Clasp
+- [[https://clasp-developers.github.io/][Official website]]
+
+* REPL
+Normally, running the command for you implementation will get you into the REPL. If you are using Roswell, running the command =ros run= will get you into the REPL for the default implementation or you can specify a specific implementation by running the command =ros run -L <your-implementation>=
+
+However, Most REPLs don't allow you to go back in history. To that you will need to use [[https://github.com/hanslub42/rlwrap][rlwrap]], a command line utility that help you navigate the history of you REPL commands. To use it just prefix your implementation command by =rlwrap= for example =rlwrap sbcl=. This will allow you to navigate the history of your REPL commands using the up and down arrow keys.
+
+* Editor Setup
+** Emacs
+The main packages that allow interaction with the REPL are slime and sly. SLY is a fork or slime and adds more features to it. You can use the provided =init.el= by running the command ~emacs -Q -l init.el~ to run emacs with the minimal configuration to get you started. Make sure to change the =inferior-lisp-program= in before running the command to run with your implemenation of choice. You can also customize the variable =lisp-repl= to shoose either sly or slime.
+Alternatively, you can follow the guides below to learn how to add these packages to you emacs configuration.
+
+Remember that Sly and Slime are conflicting. If you decide to install one remember to uninstall the other.
+
+*** SLIME
+- [[https://slime.common-lisp.dev/][Official Website]]
+
+Add the following to your emacs configuration init file.
+#+begin_src elisp
+(use-package slime
+  :ensure t)
+#+end_src
+
+*** Sly
+- [[https://github.com/joaotavora/sly][github page]]
+- [[http://joaotavora.github.io/sly/][Sly User Manual]]
+
+Add the following to your emacs configuration init file.
+#+begin_src elisp
+(use-package sly
+  :ensure t)
+#+end_src
+
+* Package, System and Dependencies
+* System Definition
+** ASDF
+- [[https://asdf.common-lisp.dev][Official website]]
+
+ASDF, or Another System Definition Facility, is a build system: a tool for specifying how systems of Common Lisp software are made up of components (sub-systems and files)
+The def system form
+Example of =hello-lisp.asd=
+
+#+begin_src lisp
+;; Usual Lisp comments are allowed here
+(defsystem "hello-lisp"
+  :description "hello-lisp: a sample Lisp system."
+  :version "0.0.1"
+  :author "Author Name <username@example.com>"
+  :licence "Public Domain"
+  :depends-on ("optima.ppcre" "command-line-arguments")
+  :components ((:file "packages")
+               (:file "macros" :depends-on ("packages"))
+               (:file "hello" :depends-on ("macros"))))
+#+end_src
+
+You can then load this system in the REPL as follows:
+
+#+begin_src lisp
+(asdf:load-system :hello)
+#+end_src
+
+* Dependencies Management
+** QuikLisp
+- [[https://www.quicklisp.org/beta/][Official website]]
+
+#+begin_src sh
+curl -O https://beta.quicklisp.org/quicklisp.lisp
+# replace sbcl with your implementation
+sbcl --load quicklisp.lisp
+#+end_src
+
+If you are using roswell, quicklisp comes already included you don't need to install it manually.
+
+** Qlot
+
+* Roswell
+Roswell is a Common Lisp implementation installer/manager, launcher. You can use it to install multiple implementations, run REPL and install binaries. It already comes with quicklisp pre-installed. 
+
+- [[https://roswell.github.io/][Official website]]
+- [[https://github.com/roswell/roswell/wiki/Installation][Roswell installation guide]]
+
+* Ecosystem
+** Extensions libraries
+- [[https://alexandria.common-lisp.dev/draft/alexandria.html][alexandria]]
+- [[https://github.com/ruricolist/serapeum][serapeum]]
+- [[https://github.com/slburson/fset][fset]]
+
+** Web Development
+- [[http://edicl.github.io/hunchentoot/][hunchentoot]]
+- [[https://github.com/fukamachi/woo][woo]]
+- [[https://github.com/ruricolist/spinneret][spinneret]]
+- jzon
+
+** GUI
+- [[https://github.com/rabbibotton/clog][CLOG]]
+
+* Notable Projects
+- [[https://github.com/rabbibotton/clog][CLOG]]
+- [[https://lem-project.github.io/][Lem]]
+- [[http://stumpwm.github.io/][StumpWM]]
+- [[https://nyxt.atlas.engineer/][Nyxt]]
+- [[https://github.com/Shirakumo/kandria][Kandriya]]
+- [[https://github.com/ciel-lang/CIEL][CIEL]]
+- [[https://interlisp.org/][Interlisp]]
