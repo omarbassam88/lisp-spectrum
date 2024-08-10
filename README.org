@@ -3,7 +3,7 @@
 #+date: [2024-08-07 Wed]
 #+startup:  nonum
 
-This project aims to explore the extensive spectrum of the Lisp family of languages. Lisp is renowned for its high flexibility and great control, offering programmers a powerful toolset. However, the abundance of available options can be overwhelming, leading to choice fatigue. Therefore, this project seeks to compile essential information about the major Lisp dialects, detailing their unique features, tools, and learning resources.
+This project aims to explore the extensive spectrum of the Lisp family of languages. Lisp is renowned for its high flexibility and great control, offering programmers a powerful toolset. However, the abundance of available options can be overwhelming, leading to choice fatigue. Therefore, this project seeks to compile essential information about the major Lisp dialects, detailing their unique features, tools, and learning resources. The project tries to provide beginner friendly guide for Lisp in general and for each dialect as well. It should be understandable and useful to the reader whether they are new to programming, with or without experience in a lisp dialect.
 
 The Lisps we will be exploring:
 - Common Lisp
@@ -51,6 +51,19 @@ Lisp code has the same structure as lists, enabling the creation of macros with 
 - [[http://www-formal.stanford.edu/jmc/recursive.pdf][John McCarthy Original Paper on LISP: Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I]]
 - [[https://www.softwarepreservation.org/projects/LISP/book/LISP%201.5%20Programmers%20Manual.pdf][Lisp 1.5 Manual]]
 - [[https://web.mit.edu/6.001/6.037/sicp.pdf][Book: Structure and Interpretation of Computer Programs]]
+
+* Editor Configuration
+** Emacs
+Emacs is the de facto standard for working with Lisps. This is due to the fact that it partly written and configurable with Emacs Lisp, another lisp dialect similar to Common Lisp. For every lisp you'll find an =init.el= file that you can use as an example for a quick setup to work with each lisp in Emacs out of the box. However there are some common packages that are worth mentioning here that will make your life much easier when working with lisps in Emacs:
+*** Structural Editing
+**** Paredit
+- [[http://danmidwood.com/content/2014/11/21/animated-paredit.html][The Animated Guide to Paredit]]
+**** Parinfer
+- [[https://shaunlebron.github.io/parinfer/][Official Website]]
+*** UI Enhancements
+**** Rainbow Delimiters
+A UI Enhancement to auto color pairs of parenthesis
+
 * Comparison Criteria
 ** Installation and Setup
 We explore the different ways of installing every lisp such as:
@@ -59,6 +72,7 @@ We explore the different ways of installing every lisp such as:
 - Installing from source code.
 
 We will also look into the first time setup for every lisp.
+
 ** Resources
 The availability of learning resources is crucial for any programming language. We will try to gather the most helpful resources for every lisp including:
 - Documentation
