@@ -1,0 +1,20 @@
+#+title: Guile
+#+author: Omar Bassam
+#+date: [2024-08-08 Wed]
+#+startup:  nonum
+
+* Resources
+** Documentation
+** Books
+** Videos
+** Community
+
+* Installation
+* Editor Configuration
+** Emacs
+*** Geiser
+*** arei
+* Dependenies Management
+* Project Management
+* Ecosystem
+

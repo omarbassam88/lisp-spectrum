@@ -1,0 +1,24 @@
+#+title: Scheme
+#+author: Omar Bassam
+#+date: [2024-08-08 Wed]
+#+startup:  nonum
+
+Scheme is a standard that aims to be very minimalistic in nature. That leads to a sheer amount on in-compatible implementations. That's why in this page is only for Scheme as a standard and the common concepts among all implementations. Every Dialect/Implementation deserves it's own page where we discuss it's unique features, standard conformance and ecosystem.
+
+* Resources
+** Documentation
+- [[https://www.scheme.org/][scheme.org]]
+** Books
+- [[https://docs.scheme.org/sicp/][SICP Structure and Interpretation of Computer Programs]]
+** Videos
+- [[https://www.youtube.com/playlist?list=PL7BcsI5ueSNFPCEisbaoQ0kXIDX9rR5FF][playlist: SICP Structure and Interpretation of Computer Programs]]
+- [[https://www.youtube.com/playlist?list=PLgyU3jNA6VjRMB-LXXR9ZWcU3-GCzJPm0][playlist: Introduction to the scheme programming language]]
+** Community
+
+* Standards
+
+** R7RS
+- [[https://r7rs.org/][r7rs.org]]
+
+* SRFI
+Scheme Request for Implementation
