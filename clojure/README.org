@@ -1,0 +1,34 @@
+#+title: Clojure
+#+author: Omar Bassam
+#+date: [2024-08-08 Wed]
+#+startup:  nonum
+
+* Resources
+** Documentation
+- [[https://clojure.org/][clojure.org]]
+** Books
+- [[https://www.braveclojure.com/ ][Clojure for the brave and true]]
+** Videos
+- [[https://www.youtube.com/watch?v=SxdOUGdseq4]["Simple Made Easy" - Rich Hickey (2011)]]
+** Community
+- [[http://clojurians.net/][Clojurians Slack channel]]
+- [[https://www.reddit.com/r/Clojure/][Clojure Subreddit]]
+* Installation
+
+* Editor Configuration
+** Emacs
+The standard way to interact with the REPL in clojure is cider. To start a cider REPL, just run the command =cider-jack-in-clj= in Emacs.
+
+*** Cider
+- [[https://cider.mx/][Official website]]
+*** clj-refactor
+- [[https://github.com/clojure-emacs/clj-refactor.el][github repo]]
+
+Offers powerful refactoring functionalitie for clojure code.
+
+* Dependencies and Project Management
+** built-in deps.edn
+** Leiningin
+* Ecosystem
+* Notable Projects
+
