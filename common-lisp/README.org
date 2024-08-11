@@ -81,6 +81,23 @@ Add the following to your emacs configuration init file.
   :ensure t)
 #+end_src
 
+** Vim and NeoVim
+
+*** slimv
+- [[https://github.com/kovisoft/slimv][github repo]]
+
+*** vlime
+- [[https://github.com/vlime/vlime][github repo]]
+
+** VSCode
+
+*** Alive
+- [[https://marketplace.visualstudio.com/items?itemName=rheller.alive][Extension page]]
+- [[https://lispcookbook.github.io/cl-cookbook/vscode-alive.html][Using VSCode with Alive]]
+
+** LEM
+- [[https://lem-project.github.io/][Official website]]
+
 * Package, System and Dependencies
 * System Definition
 ** ASDF
