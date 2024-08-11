@@ -41,7 +41,7 @@ Common lisp is just a standard, you will need to choose the implementation(s) ac
 
 ** Steel Bank Common Lisp (SBCL)
 - [[https://www.sbcl.org/][Official website]]
-** ARmedear Common Lisp (ABCL) 
+** Armed Bear Common Lisp (ABCL) 
 - [[https://armedbear.common-lisp.dev][Official website]]
 ** Clozure CL (CCL)
 - [[https://ccl.clozure.com/][Official website]]
@@ -149,6 +149,6 @@ Roswell is a Common Lisp implementation installer/manager, launcher. You can use
 - [[https://lem-project.github.io/][Lem]]
 - [[http://stumpwm.github.io/][StumpWM]]
 - [[https://nyxt.atlas.engineer/][Nyxt]]
-- [[https://github.com/Shirakumo/kandria][Kandriya]]
+- [[https://github.com/Shirakumo/kandria][Kandria]]
 - [[https://github.com/ciel-lang/CIEL][CIEL]]
 - [[https://interlisp.org/][Interlisp]]
