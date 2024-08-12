@@ -18,21 +18,6 @@ The Lisps we will be exploring:
   - ClojureScript
   - Fennel
 
-Here's a simple diagram showing the family tree of these lisps and how do they relate to each other
-#+begin_src mermaid
-flowchart TD
-    A(Lisp) --> B(Common Lisp)
-    A --> S(Scheme)
-    A --> J(Clojure)
-    S --> E(Chez)
-    E --> R(Racket)
-    S --> I(Chicken)
-    S --> G(Gambit)
-    G --> L(Gerbil)
-    S --> Y(Guile)
-
-#+end_src
-
 * Why Lisps
 ** Syntax
 Lisp has a simple syntax that can be learned in a day. All code is written as expressions, known as S-Expressions, which are lists with prefix notation. The first element is the operator, and the rest are arguments.
