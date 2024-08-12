@@ -6,7 +6,7 @@
 This project aims to explore the extensive spectrum of the Lisp family of languages. Lisp is renowned for its high flexibility and great control, offering programmers a powerful toolset. However, the abundance of available options can be overwhelming, leading to choice fatigue. Therefore, this project seeks to compile essential information about the major Lisp dialects, detailing their unique features, tools, and learning resources. The project tries to provide beginner friendly guide for Lisp in general and for each dialect as well. It should be understandable and useful to the reader whether they are new to programming, with or without experience in a lisp dialect.
 
 The Lisps we will be exploring:
-- Common Lisp
+- [[file:common-lisp/][Common Lisp]]
 - Scheme
   - Chez Scheme
     - Racket

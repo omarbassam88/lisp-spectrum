@@ -1,22 +1,21 @@
-#+title: Guile
+#+title: Chicken
 #+author: Omar Bassam
 #+date: [2024-08-08 Wed]
 #+startup:  nonum
 
 * Resources
 ** Documentation
+- [[https://call-cc.org/][Official website]]
 ** Books
 ** Videos
 ** Community
 
 * Installation
 * REPL
-- [[https://www.youtube.com/watch?v=nkP4RAEUh_A][video: Hacking with Guile Or how I stopped worrying and learned to love the REPL]]
+- [[https://www.youtube.com/watch?v=eXB3I3S3vJc&t=222s][video: Practical Chicken Scheme with Emacs: hello-world webserver]]
 * Editor Configuration
 ** Emacs
 *** Geiser
-*** arei
 * Dependenies Management
 * Project Management
 * Ecosystem
-
