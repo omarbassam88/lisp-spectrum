@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Common Lisp</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Common Lisp</h1>
+<p>
+Common Lisp is the modern, multi-paradigm, high-performance, compiled, ANSI-standardized, most prominent (along with Scheme) descendant of the long-running family of Lisp programming languages.
+</p>
+
+<div id="outline-container-org6125eb7" class="outline-2">
+<h2 id="org6125eb7">Resources</h2>
+<div class="outline-text-2" id="text-org6125eb7">
+</div>
+<div id="outline-container-org81954b5" class="outline-3">
+<h3 id="org81954b5">Documentation</h3>
+<div class="outline-text-3" id="text-org81954b5">
+<ul class="org-ul">
+<li><a href="https://www.lispworks.com/documentation/HyperSpec/Front/Contents.htm">LispWorks HyperSpec</a></li>
+<li><a href="http://novaspec.org/cl/">Nova Spec</a> (a nicer alternative to HyperSpec)</li>
+<li><a href="https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node1.html">Common Lisp the Language 2nd edition</a></li>
+<li><a href="https://lispcookbook.github.io/cl-cookbook/">The Common Lisp Cook Book</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org82955da" class="outline-3">
+<h3 id="org82955da">Books</h3>
+<div class="outline-text-3" id="text-org82955da">
+<ul class="org-ul">
+<li><a href="https://gigamonkeys.com/book/">Practical Common Lisp</a></li>
+<li><a href="http://www.paulgraham.com/acl.html">ANSI Common Lisp Paul Graham</a></li>
+<li><a href="https://leanpub.com/lovinglisp/read#leanpub-auto-cover-material-copyright-and-license">Loving Common Lisp, or the Savvy Programmer's Secret Weapon</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc5fdfe4" class="outline-3">
+<h3 id="orgc5fdfe4">Videos</h3>
+<div class="outline-text-3" id="text-orgc5fdfe4">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=4NO83wZVT0A&amp;t=1789s">Practical Common Lisp</a></li>
+<li><a href="https://www.youtube.com/watch?v=IrmHp1rRQ68">Common Lisp Object Standard</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org09b138a" class="outline-3">
+<h3 id="org09b138a">Community</h3>
+<div class="outline-text-3" id="text-org09b138a">
+<ul class="org-ul">
+<li><a href="https://www.reddit.com/r/Common_Lisp/">Common Lisp Subreddit</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org20f96ba" class="outline-2">
+<h2 id="org20f96ba">Implementations</h2>
+<div class="outline-text-2" id="text-org20f96ba">
+<p>
+Common lisp is just a standard, you will need to choose the implementation(s) according to your needs. Below is a simple table that gives you a brief idea of the implementations available. 
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Implementation</th>
+<th scope="col" class="org-left">Installation</th>
+<th scope="col" class="org-left">Target(s)</th>
+<th scope="col" class="org-left">License</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">SBCL</td>
+<td class="org-left">apt,pacman ,nix, guix</td>
+<td class="org-left">Machine Code</td>
+<td class="org-left">Public Domain</td>
+</tr>
+
+<tr>
+<td class="org-left">ABCL</td>
+<td class="org-left">apt,pacman ,nix, guix</td>
+<td class="org-left">JVM byte code</td>
+<td class="org-left">GNU GPL3</td>
+</tr>
+
+<tr>
+<td class="org-left">Clozure (CCL)</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">native code</td>
+<td class="org-left">LLGPL</td>
+</tr>
+
+<tr>
+<td class="org-left">ECL</td>
+<td class="org-left">apt, nix, guix</td>
+<td class="org-left">C</td>
+<td class="org-left">GNU LGPL2.1</td>
+</tr>
+
+<tr>
+<td class="org-left">CLASP</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">LLVM</td>
+<td class="org-left">LGPL2.1</td>
+</tr>
+
+<tr>
+<td class="org-left">LispWorks</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Proprietary</td>
+</tr>
+
+<tr>
+<td class="org-left">Allegro</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Proprietary</td>
+</tr>
+
+<tr>
+<td class="org-left">CLISP</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">SICL</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="outline-container-orgf6bf8d1" class="outline-3">
+<h3 id="orgf6bf8d1">Steel Bank Common Lisp (SBCL)</h3>
+<div class="outline-text-3" id="text-orgf6bf8d1">
+<ul class="org-ul">
+<li><a href="https://www.sbcl.org/">Official website</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4416905" class="outline-3">
+<h3 id="org4416905">Armed Bear Common Lisp (ABCL)</h3>
+<div class="outline-text-3" id="text-org4416905">
+<ul class="org-ul">
+<li><a href="https://armedbear.common-lisp.dev">Official website</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org28bf2ab" class="outline-3">
+<h3 id="org28bf2ab">Clozure CL (CCL)</h3>
+<div class="outline-text-3" id="text-org28bf2ab">
+<ul class="org-ul">
+<li><a href="https://ccl.clozure.com/">Official website</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd1fecfe" class="outline-3">
+<h3 id="orgd1fecfe">ECL</h3>
+<div class="outline-text-3" id="text-orgd1fecfe">
+<ul class="org-ul">
+<li><a href="https://ecl.common-lisp.dev/main.html">Official Website</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org23a810c" class="outline-3">
+<h3 id="org23a810c">Clasp</h3>
+<div class="outline-text-3" id="text-org23a810c">
+<ul class="org-ul">
+<li><a href="https://clasp-developers.github.io/">Official website</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7e81af5" class="outline-2">
+<h2 id="org7e81af5">REPL</h2>
+<div class="outline-text-2" id="text-org7e81af5">
+<p>
+Normally, running the command for you implementation will get you into the REPL. If you are using Roswell, running the command <code>ros run</code> will get you into the REPL for the default implementation or you can specify a specific implementation by running the command <code>ros run -L &lt;your-implementation&gt;</code>
+</p>
+
+<p>
+However, Most REPLs don't allow you to go back in history. To that you will need to use <a href="https://github.com/hanslub42/rlwrap">rlwrap</a>, a command line utility that help you navigate the history of you REPL commands. To use it just prefix your implementation command by <code>rlwrap</code> for example <code>rlwrap sbcl</code>. This will allow you to navigate the history of your REPL commands using the up and down arrow keys.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2695983" class="outline-2">
+<h2 id="org2695983">Editor Setup</h2>
+<div class="outline-text-2" id="text-org2695983">
+</div>
+<div id="outline-container-org8d05b7b" class="outline-3">
+<h3 id="org8d05b7b">Emacs</h3>
+<div class="outline-text-3" id="text-org8d05b7b">
+<p>
+The main packages that allow interaction with the REPL are slime and sly. SLY is a fork or slime and adds more features to it. You can use the provided <code>init.el</code> by running the command <code>emacs -Q -l init.el</code> to run emacs with the minimal configuration to get you started. Make sure to change the <code>inferior-lisp-program</code> in before running the command to run with your implemenation of choice. You can also customize the variable <code>lisp-repl</code> to shoose either sly or slime.
+Alternatively, you can follow the guides below to learn how to add these packages to you emacs configuration.
+</p>
+
+<p>
+Remember that Sly and Slime are conflicting. If you decide to install one remember to uninstall the other.
+</p>
+</div>
+
+<div id="outline-container-org21ce693" class="outline-4">
+<h4 id="org21ce693">SLIME</h4>
+<div class="outline-text-4" id="text-org21ce693">
+<ul class="org-ul">
+<li><a href="https://slime.common-lisp.dev/">Official Website</a></li>
+</ul>
+
+<p>
+Add the following to your emacs configuration init file.
+</p>
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="font-weight: bold;">use-package</span> slime
+  <span style="font-weight: bold;">:ensure</span> t)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb67863a" class="outline-4">
+<h4 id="orgb67863a">Sly</h4>
+<div class="outline-text-4" id="text-orgb67863a">
+<ul class="org-ul">
+<li><a href="https://github.com/joaotavora/sly">github page</a></li>
+<li><a href="http://joaotavora.github.io/sly/">Sly User Manual</a></li>
+</ul>
+
+<p>
+Add the following to your emacs configuration init file.
+</p>
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="font-weight: bold;">use-package</span> sly
+  <span style="font-weight: bold;">:ensure</span> t)
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb486282" class="outline-3">
+<h3 id="orgb486282">Vim and NeoVim</h3>
+<div class="outline-text-3" id="text-orgb486282">
+</div>
+<div id="outline-container-org6d1027d" class="outline-4">
+<h4 id="org6d1027d">slimv</h4>
+<div class="outline-text-4" id="text-org6d1027d">
+<ul class="org-ul">
+<li><a href="https://github.com/kovisoft/slimv">github repo</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3a5b2cc" class="outline-4">
+<h4 id="org3a5b2cc">vlime</h4>
+<div class="outline-text-4" id="text-org3a5b2cc">
+<ul class="org-ul">
+<li><a href="https://github.com/vlime/vlime">github repo</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9aae637" class="outline-3">
+<h3 id="org9aae637">VSCode</h3>
+<div class="outline-text-3" id="text-org9aae637">
+</div>
+<div id="outline-container-org17ab555" class="outline-4">
+<h4 id="org17ab555">Alive</h4>
+<div class="outline-text-4" id="text-org17ab555">
+<ul class="org-ul">
+<li><a href="https://marketplace.visualstudio.com/items?itemName=rheller.alive">Extension page</a></li>
+<li><a href="https://lispcookbook.github.io/cl-cookbook/vscode-alive.html">Using VSCode with Alive</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org372eaab" class="outline-3">
+<h3 id="org372eaab">LEM</h3>
+<div class="outline-text-3" id="text-org372eaab">
+<ul class="org-ul">
+<li><a href="https://lem-project.github.io/">Official website</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga25d4bd" class="outline-2">
+<h2 id="orga25d4bd">Package, System and Dependencies</h2>
+</div>
+<div id="outline-container-org953ccb6" class="outline-2">
+<h2 id="org953ccb6">System Definition</h2>
+<div class="outline-text-2" id="text-org953ccb6">
+</div>
+<div id="outline-container-orgb1aa5e7" class="outline-3">
+<h3 id="orgb1aa5e7">ASDF</h3>
+<div class="outline-text-3" id="text-orgb1aa5e7">
+<ul class="org-ul">
+<li><a href="https://asdf.common-lisp.dev">Official website</a></li>
+</ul>
+
+<p>
+ASDF, or Another System Definition Facility, is a build system: a tool for specifying how systems of Common Lisp software are made up of components (sub-systems and files)
+The def system form
+Example of <code>hello-lisp.asd</code>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Usual Lisp comments are allowed here</span>
+(defsystem <span style="font-style: italic;">"hello-lisp"</span>
+  <span style="font-weight: bold;">:description</span> <span style="font-style: italic;">"hello-lisp: a sample Lisp system."</span>
+  <span style="font-weight: bold;">:version</span> <span style="font-style: italic;">"0.0.1"</span>
+  <span style="font-weight: bold;">:author</span> <span style="font-style: italic;">"Author Name <a href="mailto:username%40example.com">&lt;username@example.com&gt;</a>"</span>
+  <span style="font-weight: bold;">:licence</span> <span style="font-style: italic;">"Public Domain"</span>
+  <span style="font-weight: bold;">:depends-on</span> (<span style="font-style: italic;">"optima.ppcre"</span> <span style="font-style: italic;">"command-line-arguments"</span>)
+  <span style="font-weight: bold;">:components</span> ((<span style="font-weight: bold;">:file</span> <span style="font-style: italic;">"packages"</span>)
+               (<span style="font-weight: bold;">:file</span> <span style="font-style: italic;">"macros"</span> <span style="font-weight: bold;">:depends-on</span> (<span style="font-style: italic;">"packages"</span>))
+               (<span style="font-weight: bold;">:file</span> <span style="font-style: italic;">"hello"</span> <span style="font-weight: bold;">:depends-on</span> (<span style="font-style: italic;">"macros"</span>))))
+</pre>
+</div>
+
+<p>
+You can then load this system in the REPL as follows:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-lisp">(asdf:load-system <span style="font-weight: bold;">:hello</span>)
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc018cf7" class="outline-2">
+<h2 id="orgc018cf7">Dependencies Management</h2>
+<div class="outline-text-2" id="text-orgc018cf7">
+</div>
+<div id="outline-container-orgd266c22" class="outline-3">
+<h3 id="orgd266c22">QuikLisp</h3>
+<div class="outline-text-3" id="text-orgd266c22">
+<ul class="org-ul">
+<li><a href="https://www.quicklisp.org/beta/">Official website</a></li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-sh">curl -O https://beta.quicklisp.org/quicklisp.lisp
+<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">replace sbcl with your implementation</span>
+sbcl --load quicklisp.lisp
+</pre>
+</div>
+
+<p>
+If you are using roswell, quicklisp comes already included you don't need to install it manually.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org824c940" class="outline-3">
+<h3 id="org824c940">Qlot</h3>
+</div>
+</div>
+
+<div id="outline-container-org01dfbf1" class="outline-2">
+<h2 id="org01dfbf1">Roswell</h2>
+<div class="outline-text-2" id="text-org01dfbf1">
+<p>
+Roswell is a Common Lisp implementation installer/manager, launcher. You can use it to install multiple implementations, run REPL and install binaries. It already comes with quicklisp pre-installed. 
+</p>
+
+<ul class="org-ul">
+<li><a href="https://roswell.github.io/">Official website</a></li>
+<li><a href="https://github.com/roswell/roswell/wiki/Installation">Roswell installation guide</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge056d02" class="outline-2">
+<h2 id="orge056d02">Ecosystem</h2>
+<div class="outline-text-2" id="text-orge056d02">
+</div>
+<div id="outline-container-org9b70e69" class="outline-3">
+<h3 id="org9b70e69">Extensions libraries</h3>
+<div class="outline-text-3" id="text-org9b70e69">
+<ul class="org-ul">
+<li><a href="https://alexandria.common-lisp.dev/draft/alexandria.html">alexandria</a></li>
+<li><a href="https://github.com/ruricolist/serapeum">serapeum</a></li>
+<li><a href="https://github.com/slburson/fset">fset</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org89c4c08" class="outline-3">
+<h3 id="org89c4c08">Web Development</h3>
+<div class="outline-text-3" id="text-org89c4c08">
+<ul class="org-ul">
+<li><a href="http://edicl.github.io/hunchentoot/">hunchentoot</a></li>
+<li><a href="https://github.com/fukamachi/woo">woo</a></li>
+<li><a href="https://github.com/ruricolist/spinneret">spinneret</a></li>
+<li>jzon</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7bf1b8b" class="outline-3">
+<h3 id="org7bf1b8b">GUI</h3>
+<div class="outline-text-3" id="text-org7bf1b8b">
+<ul class="org-ul">
+<li><a href="https://github.com/rabbibotton/clog">CLOG</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd69a131" class="outline-2">
+<h2 id="orgd69a131">Notable Projects</h2>
+<div class="outline-text-2" id="text-orgd69a131">
+<ul class="org-ul">
+<li><a href="https://github.com/rabbibotton/clog">CLOG</a></li>
+<li><a href="https://lem-project.github.io/">Lem</a></li>
+<li><a href="http://stumpwm.github.io/">StumpWM</a></li>
+<li><a href="https://nyxt.atlas.engineer/">Nyxt</a></li>
+<li><a href="https://github.com/Shirakumo/kandria">Kandria</a></li>
+<li><a href="https://github.com/ciel-lang/CIEL">CIEL</a></li>
+<li><a href="https://interlisp.org/">Interlisp</a></li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>
