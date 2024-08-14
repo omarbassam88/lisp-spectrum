@@ -26,11 +26,12 @@
       org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />")
 
 (defun rename-project-files (from-regex to)
-  (dolist (from-file (directory-files-recursively "public" from-regex))
+  (dolist (from-file (directory-files-recursively "./public" from-regex))
     (let ((to-file-name (replace-regexp-in-string from-regex to 
 						  from-file t)))
       (message (format "renaming %s to %s" from-file to-file-name))
       (rename-file from-file to-file-name t))))
+
 
 (setq org-publish-project-alist
       (list
@@ -38,7 +39,8 @@
 	"lisp-spectrum"
 	:base-directory "."
 	:base-extension "org"
-	:publishing-directory "public"
+	:publishing-directory "./public"
+	:publishing-function 'org-html-publish-to-html
 	:recursive t
 	:with-toc nil
 	:with-author nil
@@ -48,9 +50,11 @@
 	:time-stamp-file nil
 	:section-numbers nil
 	;; function to be called after publishing the project
-	:completion-function (lambda (proj)
+	:completion-function (lambda (_)
 			       (rename-project-files "README" "index")
 			       (message "Project is now published")))))
 
+(defun publish ()
+  (org-publish-all t))
 
-(org-publish-all t)
+(publish)
