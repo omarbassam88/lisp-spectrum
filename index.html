@@ -21,33 +21,34 @@ The Lisps we will be exploring:
 </p>
 <ul class="org-ul">
 <li><a href="common-lisp/">Common Lisp</a></li>
-<li>Scheme
+<li><a href="scheme/">Scheme</a>
 <ul class="org-ul">
 <li>Chez Scheme
 <ul class="org-ul">
 <li>Racket</li>
 </ul></li>
-<li>Chicken Scheme</li>
-<li>Gambit Scheme
+<li>Chibi Scheme</li>
+<li><a href="chicken//">Chicken Scheme</a></li>
+<li><a href="gambit/">Gambit Scheme</a>
 <ul class="org-ul">
 <li>Gerbil Scheme</li>
 </ul></li>
-<li>Guile Scheme</li>
+<li><a href="guile/">Guile Scheme</a></li>
 </ul></li>
-<li>Clojure
+<li><a href="clojure/">Clojure</a>
 <ul class="org-ul">
 <li>ClojureScript</li>
 <li>Fennel</li>
 </ul></li>
 </ul>
 
-<div id="outline-container-org797c40d" class="outline-2">
-<h2 id="org797c40d">Why Lisps</h2>
-<div class="outline-text-2" id="text-org797c40d">
+<div id="outline-container-orgae3048d" class="outline-2">
+<h2 id="orgae3048d">Why Lisps</h2>
+<div class="outline-text-2" id="text-orgae3048d">
 </div>
-<div id="outline-container-org504255f" class="outline-3">
-<h3 id="org504255f">Syntax</h3>
-<div class="outline-text-3" id="text-org504255f">
+<div id="outline-container-orgde978bc" class="outline-3">
+<h3 id="orgde978bc">Syntax</h3>
+<div class="outline-text-3" id="text-orgde978bc">
 <p>
 Lisp has a simple syntax that can be learned in a day. All code is written as expressions, known as S-Expressions, which are lists with prefix notation. The first element is the operator, and the rest are arguments.
 </p>
@@ -61,26 +62,26 @@ Lisp has a simple syntax that can be learned in a day. All code is written as ex
 </div>
 </div>
 
-<div id="outline-container-org25e4a51" class="outline-3">
-<h3 id="org25e4a51">REPL</h3>
-<div class="outline-text-3" id="text-org25e4a51">
+<div id="outline-container-org4227bd4" class="outline-3">
+<h3 id="org4227bd4">REPL</h3>
+<div class="outline-text-3" id="text-org4227bd4">
 <p>
 The REPL is a major selling point for Lisp, allowing for interactive, incremental program development. This feature has influenced many modern languages to offer similar interactive experiences.
 </p>
 </div>
 </div>
-<div id="outline-container-org7e0ce21" class="outline-3">
-<h3 id="org7e0ce21">Code as data</h3>
-<div class="outline-text-3" id="text-org7e0ce21">
+<div id="outline-container-orga07300f" class="outline-3">
+<h3 id="orga07300f">Code as data</h3>
+<div class="outline-text-3" id="text-orga07300f">
 <p>
 Lisp code has the same structure as lists, enabling the creation of macros with list-processing functions. This facilitates the development of Domain-Specific Languages (DSLs).
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org34f09a4" class="outline-2">
-<h2 id="org34f09a4">Lisp Resources</h2>
-<div class="outline-text-2" id="text-org34f09a4">
+<div id="outline-container-org695e638" class="outline-2">
+<h2 id="org695e638">Lisp Resources</h2>
+<div class="outline-text-2" id="text-org695e638">
 <ul class="org-ul">
 <li><a href="http://www-formal.stanford.edu/jmc/recursive.pdf">John McCarthy Original Paper on LISP: Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I</a></li>
 <li><a href="https://www.softwarepreservation.org/projects/LISP/book/LISP%201.5%20Programmers%20Manual.pdf">Lisp 1.5 Manual</a></li>
@@ -89,31 +90,31 @@ Lisp code has the same structure as lists, enabling the creation of macros with 
 </div>
 </div>
 
-<div id="outline-container-org3e1f580" class="outline-2">
-<h2 id="org3e1f580">Editor Configuration</h2>
-<div class="outline-text-2" id="text-org3e1f580">
+<div id="outline-container-org0ca5353" class="outline-2">
+<h2 id="org0ca5353">Editor Configuration</h2>
+<div class="outline-text-2" id="text-org0ca5353">
 </div>
-<div id="outline-container-org6e031ee" class="outline-3">
-<h3 id="org6e031ee">Emacs</h3>
-<div class="outline-text-3" id="text-org6e031ee">
+<div id="outline-container-org0b0223e" class="outline-3">
+<h3 id="org0b0223e">Emacs</h3>
+<div class="outline-text-3" id="text-org0b0223e">
 <p>
 Emacs is the de facto standard for working with Lisps. This is due to the fact that it partly written and configurable with Emacs Lisp, another lisp dialect similar to Common Lisp. For every lisp you'll find an <code>init.el</code> file that you can use as an example for a quick setup to work with each lisp in Emacs out of the box. However there are some common packages that are worth mentioning here that will make your life much easier when working with lisps in Emacs:
 </p>
 </div>
-<div id="outline-container-orgdab15a7" class="outline-4">
-<h4 id="orgdab15a7">Structural Editing</h4>
-<div class="outline-text-4" id="text-orgdab15a7">
+<div id="outline-container-org116de87" class="outline-4">
+<h4 id="org116de87">Structural Editing</h4>
+<div class="outline-text-4" id="text-org116de87">
 </div>
 <ul class="org-ul">
-<li><a id="org339f70a"></a>Paredit<br />
-<div class="outline-text-5" id="text-org339f70a">
+<li><a id="org7d93e4f"></a>Paredit<br />
+<div class="outline-text-5" id="text-org7d93e4f">
 <ul class="org-ul">
 <li><a href="http://danmidwood.com/content/2014/11/21/animated-paredit.html">The Animated Guide to Paredit</a></li>
 </ul>
 </div>
 </li>
-<li><a id="org1a48a64"></a>Parinfer<br />
-<div class="outline-text-5" id="text-org1a48a64">
+<li><a id="org08a8a19"></a>Parinfer<br />
+<div class="outline-text-5" id="text-org08a8a19">
 <ul class="org-ul">
 <li><a href="https://shaunlebron.github.io/parinfer/">Official Website</a></li>
 </ul>
@@ -121,13 +122,13 @@ Emacs is the de facto standard for working with Lisps. This is due to the fact t
 </li>
 </ul>
 </div>
-<div id="outline-container-org9158fcc" class="outline-4">
-<h4 id="org9158fcc">UI Enhancements</h4>
-<div class="outline-text-4" id="text-org9158fcc">
+<div id="outline-container-org32d5708" class="outline-4">
+<h4 id="org32d5708">UI Enhancements</h4>
+<div class="outline-text-4" id="text-org32d5708">
 </div>
 <ul class="org-ul">
-<li><a id="org235da3f"></a>Rainbow Delimiters<br />
-<div class="outline-text-5" id="text-org235da3f">
+<li><a id="orgef945a3"></a>Rainbow Delimiters<br />
+<div class="outline-text-5" id="text-orgef945a3">
 <p>
 A UI Enhancement to auto color pairs of parenthesis
 </p>
@@ -138,13 +139,13 @@ A UI Enhancement to auto color pairs of parenthesis
 </div>
 </div>
 
-<div id="outline-container-org49034bd" class="outline-2">
-<h2 id="org49034bd">Comparison Criteria</h2>
-<div class="outline-text-2" id="text-org49034bd">
+<div id="outline-container-org3da909a" class="outline-2">
+<h2 id="org3da909a">Comparison Criteria</h2>
+<div class="outline-text-2" id="text-org3da909a">
 </div>
-<div id="outline-container-org23a18c2" class="outline-3">
-<h3 id="org23a18c2">Installation and Setup</h3>
-<div class="outline-text-3" id="text-org23a18c2">
+<div id="outline-container-org6e5a599" class="outline-3">
+<h3 id="org6e5a599">Installation and Setup</h3>
+<div class="outline-text-3" id="text-org6e5a599">
 <p>
 We explore the different ways of installing every lisp such as:
 </p>
@@ -160,9 +161,9 @@ We will also look into the first time setup for every lisp.
 </div>
 </div>
 
-<div id="outline-container-org85397c7" class="outline-3">
-<h3 id="org85397c7">Resources</h3>
-<div class="outline-text-3" id="text-org85397c7">
+<div id="outline-container-org113e8f6" class="outline-3">
+<h3 id="org113e8f6">Resources</h3>
+<div class="outline-text-3" id="text-org113e8f6">
 <p>
 The availability of learning resources is crucial for any programming language. We will try to gather the most helpful resources for every lisp including:
 </p>
@@ -176,27 +177,27 @@ The availability of learning resources is crucial for any programming language. 
 </div>
 </div>
 
-<div id="outline-container-org0ab00dd" class="outline-3">
-<h3 id="org0ab00dd">REPL</h3>
-<div class="outline-text-3" id="text-org0ab00dd">
+<div id="outline-container-orgda3e443" class="outline-3">
+<h3 id="orgda3e443">REPL</h3>
+<div class="outline-text-3" id="text-orgda3e443">
 <p>
 Ease and speed of interacting with the REPL, including the possibility of connecting to a remote REPL.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org6d5dcd3" class="outline-3">
-<h3 id="org6d5dcd3">Editor Integration</h3>
-<div class="outline-text-3" id="text-org6d5dcd3">
+<div id="outline-container-org75eeeb9" class="outline-3">
+<h3 id="org75eeeb9">Editor Integration</h3>
+<div class="outline-text-3" id="text-org75eeeb9">
 <p>
 While Emacs is the de facto standard for working with Lisps, some have their own IDEs (e.g., Dr. Racket for Racket) or support through plugins in other editors. We will explore available editor options for each Lisp.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org84bdbdf" class="outline-3">
-<h3 id="org84bdbdf">Package and Project management</h3>
-<div class="outline-text-3" id="text-org84bdbdf">
+<div id="outline-container-org3953079" class="outline-3">
+<h3 id="org3953079">Package and Project management</h3>
+<div class="outline-text-3" id="text-org3953079">
 <ul class="org-ul">
 <li>Tools for managing packages and projects.</li>
 <li>Ease of installing/uninstalling packages.</li>
@@ -206,27 +207,27 @@ While Emacs is the de facto standard for working with Lisps, some have their own
 </div>
 </div>
 
-<div id="outline-container-org193fafd" class="outline-3">
-<h3 id="org193fafd">Standard Library and Ecosystem</h3>
-<div class="outline-text-3" id="text-org193fafd">
+<div id="outline-container-orgd6f828c" class="outline-3">
+<h3 id="orgd6f828c">Standard Library and Ecosystem</h3>
+<div class="outline-text-3" id="text-orgd6f828c">
 <p>
 We will discuss the built-in libraries for each Lisp and their usability. Additionally, we will explore the ecosystem for each Lisp, including where to find and download packages.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org581e2fd" class="outline-3">
-<h3 id="org581e2fd">Performance</h3>
-<div class="outline-text-3" id="text-org581e2fd">
+<div id="outline-container-orgc732cb1" class="outline-3">
+<h3 id="orgc732cb1">Performance</h3>
+<div class="outline-text-3" id="text-orgc732cb1">
 <p>
 This is very subjective as every lisp compiles to a different target(s). So, it's hard to decide whether the comparison of performance is between the lisp implementations or the target platforms. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf08fc1a" class="outline-3">
-<h3 id="orgf08fc1a">Interoperability with target platform(s)</h3>
-<div class="outline-text-3" id="text-orgf08fc1a">
+<div id="outline-container-org3bb8c0c" class="outline-3">
+<h3 id="org3bb8c0c">Interoperability with target platform(s)</h3>
+<div class="outline-text-3" id="text-org3bb8c0c">
 <p>
 Most lisps offer a way of interoperability with their target platform(s) or with other platforms as well. This can differ from one lisp to another, so this won't be a comparison but rather exploring the different options.
 </p>
