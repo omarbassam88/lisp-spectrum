@@ -7,14 +7,15 @@ This project aims to explore the extensive spectrum of the Lisp family of langua
 
 The Lisps we will be exploring:
 - [[file:common-lisp/][Common Lisp]]
-- Scheme
+- [[file:scheme/][Scheme]]
   - Chez Scheme
     - Racket
-  - Chicken Scheme
-  - Gambit Scheme
+  - Chibi Scheme
+  - [[file:chicken//][Chicken Scheme]]
+  - [[file:gambit/][Gambit Scheme]]
     - Gerbil Scheme
-  - Guile Scheme
-- Clojure
+  - [[file:guile/][Guile Scheme]]
+- [[file:clojure/][Clojure]]
   - ClojureScript
   - Fennel
 
