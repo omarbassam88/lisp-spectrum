@@ -12,62 +12,247 @@
 <body>
 <div id="content" class="content">
 <h1 class="title">Chicken</h1>
+<p>
+Chicken is a Scheme Dialect that produces portable and efficient C and supports the R5RS and R7RS standards.
+</p>
 
-<div id="outline-container-org460a468" class="outline-2">
-<h2 id="org460a468">Resources</h2>
-<div class="outline-text-2" id="text-org460a468">
+<div id="outline-container-org6552ce7" class="outline-2">
+<h2 id="org6552ce7">Resources</h2>
+<div class="outline-text-2" id="text-org6552ce7">
 </div>
-<div id="outline-container-org603d646" class="outline-3">
-<h3 id="org603d646">Documentation</h3>
-<div class="outline-text-3" id="text-org603d646">
+<div id="outline-container-orga882b5c" class="outline-3">
+<h3 id="orga882b5c">Documentation</h3>
+<div class="outline-text-3" id="text-orga882b5c">
 <ul class="org-ul">
 <li><a href="https://call-cc.org/">Official website</a></li>
+<li><a href="http://wiki.call-cc.org/man/5/The%20User%27s%20Manual">Chicken User Manual</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org22624eb" class="outline-3">
-<h3 id="org22624eb">Books</h3>
+<div id="outline-container-org066fc2b" class="outline-3">
+<h3 id="org066fc2b">Books</h3>
 </div>
-<div id="outline-container-org75dcb1c" class="outline-3">
-<h3 id="org75dcb1c">Videos</h3>
+<div id="outline-container-org4b41ed0" class="outline-3">
+<h3 id="org4b41ed0">Videos</h3>
 </div>
-<div id="outline-container-org2ffaa7c" class="outline-3">
-<h3 id="org2ffaa7c">Community</h3>
+<div id="outline-container-org942556a" class="outline-3">
+<h3 id="org942556a">Community</h3>
 </div>
 </div>
 
-<div id="outline-container-org393e7d6" class="outline-2">
-<h2 id="org393e7d6">Installation</h2>
+<div id="outline-container-org4f7d9fc" class="outline-2">
+<h2 id="org4f7d9fc">Installation</h2>
+<div class="outline-text-2" id="text-org4f7d9fc">
 </div>
-<div id="outline-container-org7881448" class="outline-2">
-<h2 id="org7881448">REPL</h2>
-<div class="outline-text-2" id="text-org7881448">
+<div id="outline-container-org902bdc7" class="outline-3">
+<h3 id="org902bdc7">Debian/Ubuntu</h3>
+<div class="outline-text-3" id="text-org902bdc7">
+<div class="org-src-container">
+<pre class="src src-shell">apt install chicken-bin
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org8d6859e" class="outline-3">
+<h3 id="org8d6859e">Arch</h3>
+<div class="outline-text-3" id="text-org8d6859e">
+<div class="org-src-container">
+<pre class="src src-shell">pacman -S chicken
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org30c5cd5" class="outline-3">
+<h3 id="org30c5cd5">Nix</h3>
+<div class="outline-text-3" id="text-org30c5cd5">
+<div class="org-src-container">
+<pre class="src src-shell">nix shell nixpkgs#chicken
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org52d24cb" class="outline-3">
+<h3 id="org52d24cb">Guix</h3>
+<div class="outline-text-3" id="text-org52d24cb">
+<div class="org-src-container">
+<pre class="src src-shell">guix shell -p chicken
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org81f3fea" class="outline-2">
+<h2 id="org81f3fea">REPL</h2>
+<div class="outline-text-2" id="text-org81f3fea">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/watch?v=eXB3I3S3vJc&amp;t=222s">video: Practical Chicken Scheme with Emacs: hello-world webserver</a></li>
 </ul>
+
+<p>
+You can enter the chicken REPL using the <code>csi</code> command. When you enter the REPL, you can enter the <code>,?</code> command to learn about the available commands. This will display a list of special commands that you can use to debug your code.
+</p>
 </div>
 </div>
-<div id="outline-container-org995e41b" class="outline-2">
-<h2 id="org995e41b">Editor Configuration</h2>
-<div class="outline-text-2" id="text-org995e41b">
+
+<div id="outline-container-org7fdec77" class="outline-2">
+<h2 id="org7fdec77">Running scripts</h2>
+<div class="outline-text-2" id="text-org7fdec77">
+<p>
+You can use the <code>csi</code> command to run scripts by adding the <code>-ss</code> flag followed by the <code>.scm</code> file then optionally followed by the arguments that you would like to pass to this script.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">csi -ss scripfile.scm &lt;args&gt;
+</pre>
 </div>
-<div id="outline-container-org7537c33" class="outline-3">
-<h3 id="org7537c33">Emacs</h3>
-<div class="outline-text-3" id="text-org7537c33">
-</div>
-<div id="outline-container-orgc9ecf0f" class="outline-4">
-<h4 id="orgc9ecf0f">Geiser</h4>
 </div>
 </div>
+<div id="outline-container-org524e859" class="outline-2">
+<h2 id="org524e859">Compiling</h2>
+<div class="outline-text-2" id="text-org524e859">
+<p>
+You can use the <code>csc</code> command to compile your code to an executable:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">csc csc -o outputname inputfile.scm
+<span style="font-weight: bold; font-style: italic;"># </span><span style="font-weight: bold; font-style: italic;">then you can run the executable</span>
+./outputname
+</pre>
 </div>
-<div id="outline-container-orgca2c266" class="outline-2">
-<h2 id="orgca2c266">Dependenies Management</h2>
+
+<p>
+Or you can compile to a shared library file that you can use within other programs:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">csc -shared file.scm
+</pre>
 </div>
-<div id="outline-container-org618ef0d" class="outline-2">
-<h2 id="org618ef0d">Project Management</h2>
 </div>
-<div id="outline-container-org3180633" class="outline-2">
-<h2 id="org3180633">Ecosystem</h2>
+</div>
+
+<div id="outline-container-org992bc0f" class="outline-2">
+<h2 id="org992bc0f">Editor Configuration</h2>
+<div class="outline-text-2" id="text-org992bc0f">
+</div>
+<div id="outline-container-orga6950e4" class="outline-3">
+<h3 id="orga6950e4">Emacs</h3>
+<div class="outline-text-3" id="text-orga6950e4">
+<ul class="org-ul">
+<li><a href="https://wiki.call-cc.org/emacs">Using Chicken with Emacs</a></li>
+</ul>
+
+<p>
+Chicken support requires some additional steps:
+</p>
+
+<ol class="org-ol">
+<li>Install the necessary support eggs.</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-shell">chicken-install -s apropos chicken-doc
+</pre>
+</div>
+
+<p>
+For Chicken 5, you’ll also need SRFI-18.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">chicken-install -s srfi-18
+</pre>
+</div>
+<ol class="org-ol">
+<li>Update the Chicken documentation database.</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-shell"><span style="font-weight: bold;">cd</span> <span style="font-weight: bold;">`csi -p '(chicken-home)'`</span>
+curl http://3e8.org/pub/chicken-doc/chicken-doc-repo.tgz | sudo tar zx
+</pre>
+</div>
+
+<p>
+With Chicken 5, this process has changed slightly:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell"><span style="font-weight: bold;">cd</span> <span style="font-weight: bold;">`csi -e '(import (chicken platform)) (display (chicken-home))(newline)'`</span>
+curl https://3e8.org/pub/chicken-doc/chicken-doc-repo-5.tgz | sudo tar zx
+</pre>
+</div>
+
+<p>
+You can use the provided <code>init.el</code> by running the command <code>emacs -Q -l init.el</code> to run emacs with the minimal configuration to get you started.
+</p>
+</div>
+
+<div id="outline-container-org4ebf77e" class="outline-4">
+<h4 id="org4ebf77e">Geiser</h4>
+<div class="outline-text-4" id="text-org4ebf77e">
+<ul class="org-ul">
+<li><a href="https://gitlab.com/emacs-geiser/chicken">geiser-chicken</a></li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="font-weight: bold;">use-package</span> geiser-chicken
+  <span style="font-weight: bold;">:ensure</span> t)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1664f4b" class="outline-2">
+<h2 id="org1664f4b">Dependencies Management</h2>
+<div class="outline-text-2" id="text-org1664f4b">
+<p>
+Chicken can be extended by additional libraries called "eggs" that can be easily installed by the command <code>chicken-install</code>.
+</p>
+
+<ul class="org-ul">
+<li><a href="http://wiki.call-cc.org/chicken-projects/egg-index-5.html">List of Available eggs</a></li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-shell">chicken-install EXTENSIONNAME
+</pre>
+</div>
+
+<p>
+The default location where eggs are installed is usually <code>/usr/local/lib/chicken/&lt;VERSION&gt;</code>. You can change the location where you want eggs to be isntalled by running setting the environment variable <code>CHICKEN_REPOSITORY</code>:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell"><span style="font-weight: bold;">export</span> <span style="font-weight: bold; font-style: italic;">CHICKEN_REPOSITORY</span>=~/myeggs/lib/chicken/&lt;VERSION&gt;
+</pre>
+</div>
+
+<p>
+or if you want to install eggs somewhere other than the default or your environment variable, you can use
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">chicken-install -p ~/myeggs &lt;package&gt;
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><a href="http://wiki.call-cc.org/man/4/Extensions#changing-repository-location">Changing repository location</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb4aabf8" class="outline-2">
+<h2 id="orgb4aabf8">Project Management</h2>
+</div>
+<div id="outline-container-org79c62ae" class="outline-2">
+<h2 id="org79c62ae">Ecosystem</h2>
 </div>
 </div>
 </body>
