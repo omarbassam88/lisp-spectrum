@@ -3,19 +3,126 @@
 #+date: [2024-08-08 Wed]
 #+startup:  nonum
 
+Chicken is a Scheme Dialect that produces portable and efficient C and supports the R5RS and R7RS standards.
+
 * Resources
 ** Documentation
 - [[https://call-cc.org/][Official website]]
+- [[http://wiki.call-cc.org/man/5/The%20User%27s%20Manual][Chicken User Manual]]
 ** Books
 ** Videos
 ** Community
 
 * Installation
+
+** Debian/Ubuntu
+#+begin_src shell
+apt install chicken-bin
+#+end_src
+** Arch
+#+begin_src shell
+pacman -S chicken
+#+end_src
+** Nix
+#+begin_src shell
+nix shell nixpkgs#chicken
+#+end_src
+
+** Guix
+#+begin_src shell
+guix shell -p chicken
+#+end_src
+
 * REPL
 - [[https://www.youtube.com/watch?v=eXB3I3S3vJc&t=222s][video: Practical Chicken Scheme with Emacs: hello-world webserver]]
+
+You can enter the chicken REPL using the =csi= command. When you enter the REPL, you can enter the =,?= command to learn about the available commands. This will display a list of special commands that you can use to debug your code.
+
+* Running scripts
+You can use the =csi= command to run scripts by adding the =-ss= flag followed by the =.scm= file then optionally followed by the arguments that you would like to pass to this script.
+
+#+begin_src shell
+csi -ss scripfile.scm <args>
+#+end_src
+* Compiling
+You can use the =csc= command to compile your code to an executable:
+
+#+begin_src shell
+csc csc -o outputname inputfile.scm
+# then you can run the executable
+./outputname
+#+end_src
+
+Or you can compile to a shared library file that you can use within other programs:
+
+#+begin_src shell
+csc -shared file.scm
+#+end_src
+
 * Editor Configuration
+
 ** Emacs
+- [[https://wiki.call-cc.org/emacs][Using Chicken with Emacs]]
+
+Chicken support requires some additional steps:
+
+1. Install the necessary support eggs.
+
+#+begin_src shell
+chicken-install -s apropos chicken-doc
+#+end_src
+
+For Chicken 5, you’ll also need SRFI-18.
+
+#+begin_src shell
+chicken-install -s srfi-18
+#+end_src
+2. Update the Chicken documentation database.
+
+#+begin_src shell
+cd `csi -p '(chicken-home)'`
+curl http://3e8.org/pub/chicken-doc/chicken-doc-repo.tgz | sudo tar zx
+#+end_src
+
+With Chicken 5, this process has changed slightly:
+
+#+begin_src shell
+cd `csi -e '(import (chicken platform)) (display (chicken-home))(newline)'`
+curl https://3e8.org/pub/chicken-doc/chicken-doc-repo-5.tgz | sudo tar zx
+#+end_src
+
+You can use the provided =init.el= by running the command ~emacs -Q -l init.el~ to run emacs with the minimal configuration to get you started.
+
 *** Geiser
-* Dependenies Management
+- [[https://gitlab.com/emacs-geiser/chicken][geiser-chicken]]
+
+#+begin_src elisp
+(use-package geiser-chicken
+  :ensure t)
+#+end_src
+
+* Dependencies Management
+Chicken can be extended by additional libraries called "eggs" that can be easily installed by the command =chicken-install=.
+
+- [[http://wiki.call-cc.org/chicken-projects/egg-index-5.html][List of Available eggs]]
+
+#+begin_src shell
+chicken-install EXTENSIONNAME
+#+end_src
+
+The default location where eggs are installed is usually =/usr/local/lib/chicken/<VERSION>=. You can change the location where you want eggs to be isntalled by running setting the environment variable =CHICKEN_REPOSITORY=:
+
+#+begin_src shell
+export CHICKEN_REPOSITORY=~/myeggs/lib/chicken/<VERSION>
+#+end_src
+
+or if you want to install eggs somewhere other than the default or your environment variable, you can use
+
+#+begin_src shell
+chicken-install -p ~/myeggs <package>
+#+end_src
+
+- [[http://wiki.call-cc.org/man/4/Extensions#changing-repository-location][Changing repository location]]
+
 * Project Management
 * Ecosystem
