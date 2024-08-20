@@ -88,3 +88,6 @@ This is very subjective as every lisp compiles to a different target(s). So, it'
 ** Interoperability with target platform(s)
 Most lisps offer a way of interoperability with their target platform(s) or with other platforms as well. This can differ from one lisp to another, so this won't be a comparison but rather exploring the different options.
 
+* Contributing
+If you would like to contribute to this project please check the [[file:CONTRIBUTING.org][Contribution guidelines]] for more information.
+

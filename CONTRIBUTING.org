@@ -1,0 +1,49 @@
+#+title: Contributing Guidelines
+#+date: [2024-08-20 Tue]
+
+* How can I contribute?
+The goal of this project is to enrich the Lisp ecosystem with more resources to help people getting started in the Lisp family of languages.
+There are a lot of ways you can contribute to this project. We welcome contributions from all levels and of all kinds.
+
+** Provide Feedback and Suggestions
+- *Constructive Feedback*:
+  You can provide constructive feedback on how to make this content more approachable, beginner-friendly and comprehensive.
+
+
+- *Report Issues*:
+  If you find broken links or outdated information, please create and issue so we can fix it.
+
+
+- *Start Discussions*:
+  Use the issue tracker to discuss topics, suggest new resources, or propose changes.
+
+** Share Resources
+- *Resource Sharing*:
+  If you know of valuable resources related to any Lisp dialect or general programming concepts, please share them. Resources can include websites, articles, books, or videos.
+
+  
+- *Submit Resources*:
+  Create an issue or pull request with your recommended resources, ensuring they fit well within the existing structure.
+
+** Write or Modify content
+- *Create New Content*:
+  If you’re knowledgeable about a specific Lisp dialect(s) or programming concept, consider writing new content.
+
+
+- *Improve Existing Content*:
+  If you spot content that could be clearer or more informative, feel free to edit it. We encourage you to create a Pull Request with your changes.
+
+
+- *Writing Format*:
+  We use [[https://orgmode.org/][Org Mode]] as a writing format for this project that is then generated into a static website. You can generate the website locally using Emacs (> 29.3) by running the following command in the project root directory.
+
+  #+begin_src shell
+  emacs -q --script publish.el
+  #+end_src
+
+  This will create folder named =public= that you can then serve to check how the website will be rendered.
+
+** Spread the word
+Share the link to this project with more people to help them know about Lisp(s) and how to getting started. Also, you can share it with other Lispers who already know a Lisp or two and are interested in trying others.
+
+
