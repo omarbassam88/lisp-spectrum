@@ -29,7 +29,11 @@
  ((eq lisp-repl 'slime)
   (message "Removing Sly and installing SLIME")
   (remove-hook 'lisp-mode-hook 'sly-editing-mode)
-  (use-package slime :ensure t)))
+  (use-package slime :ensure t)
+  (use-package slime-repl-ansi-color
+    :ensure t
+    :hook (slime-repl-mode . (lambda () (slime-repl-ansi-color-mode 1))))
+  ))
 
 ;; Paredit for structural editing
 (use-package paredit
