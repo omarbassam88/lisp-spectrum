@@ -43,6 +43,7 @@
 	:publishing-function 'org-html-publish-to-html
 	:recursive t
 	:with-toc nil
+	:headline-levels 6
 	:with-author nil
 	:with-creator nil
 	:with-date nil

@@ -8,7 +8,8 @@ Common Lisp is the modern, multi-paradigm, high-performance, compiled, ANSI-stan
 * Resources
 ** Documentation
 - [[https://www.lispworks.com/documentation/HyperSpec/Front/Contents.htm][LispWorks HyperSpec]]
-- [[http://novaspec.org/cl/][Nova Spec]] (a nicer alternative to HyperSpec)
+- [[https://cl-community-spec.github.io/pages/index.html][Common Lisp Community Spec]]
+- [[http://novaspec.org/cl/][Nova Spec]]
 - [[https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node1.html][Common Lisp the Language 2nd edition]]
 - [[https://lispcookbook.github.io/cl-cookbook/][The Common Lisp Cook Book]]
 
@@ -23,6 +24,9 @@ Common Lisp is the modern, multi-paradigm, high-performance, compiled, ANSI-stan
 
 ** Community
 - [[https://www.reddit.com/r/Common_Lisp/][Common Lisp Subreddit]]
+
+** Other
+- [[https://wiki.archlinux.org/title/Common_Lisp][archwiki: Common Lisp]]
 
 * Implementations
 Common lisp is just a standard, you will need to choose the implementation(s) according to your needs. Below is a simple table that gives you a brief idea of the implementations available. 
@@ -40,7 +44,11 @@ Common lisp is just a standard, you will need to choose the implementation(s) ac
 | SICL           |                       |               |               |
 
 ** Steel Bank Common Lisp (SBCL)
+The most popular FOSS implementation with the highest comptability.
+
 - [[https://www.sbcl.org/][Official website]]
+- [[https://www.sbcl.org/manual/][SBCL User Manual]]
+
 ** Armed Bear Common Lisp (ABCL) 
 - [[https://armedbear.common-lisp.dev][Official website]]
 ** Clozure CL (CCL)
@@ -49,6 +57,132 @@ Common lisp is just a standard, you will need to choose the implementation(s) ac
 - [[https://ecl.common-lisp.dev/main.html][Official Website]]
 ** Clasp
 - [[https://clasp-developers.github.io/][Official website]]
+* Installation
+*** Roswell
+Roswell allows you to install multiple implementations and change smoothly between them.
+It also already includes quicklisp for you so you don't have to manually install it (there's an option to disable quicklisp if you want). 
+
+- [[https://github.com/roswell/roswell/wiki/Roswell-as-an-implementation-manager][Roswell as an implementation manager]]
+
+**** Install Roswell
+Roswell is available in many package managers on many Linux Distributions.
+***** Ubuntu/Debian
+You will need to install roswell manually:
+#+begin_src shell
+curl -L https://github.com/roswell/roswell/releases/download/v23.10.14.114/roswell_23.10.14.114-1_amd64.deb --output roswell.deb
+
+sudo dpkg -i roswell.deb
+#+end_src
+***** Arch
+#+begin_src shell
+pacman -Syu roswell
+#+end_src
+***** Void
+#+begin_src shell
+sudo xbps-install -S roswell
+#+end_src
+***** Gentoo
+#+begin_src shell
+emerge --ask dev-lisp/roswell
+#+end_src
+***** FreeBSD
+Roswell is available in the FreeBSD ports tree. To install it system-wide
+
+#+begin_src shell
+cd /usr/ports/devel/roswell 
+sudo make install
+#+end_src
+
+To avoid system-wide installation, simply define a PREFIX (must be an absolute path)
+
+#+begin_src shell
+cd /usr/ports/devel/roswell
+sudo make PREFIX=/usr/home/<username>/.local install 
+#+end_src
+***** Nix
+The =roswell= package is availabe in nixpkgs and you can refer to the [[id:a7266bfa-1beb-4e7d-852b-228b8cbdb503][instructions]] below for more detailed instructions on how to setup lisp with Nix.
+***** Guix
+The =roswell= package is availabe in Guix and you can refer to the [[id:aa50b926-ae64-4447-badb-49a63cfff374][instructions]] below for more detailed instructions on how to setup lisp for Guix.
+**** Install implementation(s)
+
+To install an implementation:
+#+begin_src shell
+ros install sbcl-bin
+ros install ccl-bin # or any other implementation
+#+end_src
+
+Then to make an implementation the default for roswell:
+#+begin_src shell
+ros use sbcl
+#+end_src
+
+You can always manually set the implementation you want to use without changing the default implementation:
+#+begin_src shell
+ros run -L ccl-bin
+#+end_src
+
+*** Debian/Ubuntu
+The implementations sbcl, abcl, ecl are available with the =apt= package manager
+#+begin_src shell
+apt-get install <implementations>
+#+end_src
+
+*** Arch
+
+#+begin_src shell
+pacman -Sy sbcl
+#+end_src
+
+*** Nix
+:PROPERTIES:
+:ID:       a7266bfa-1beb-4e7d-852b-228b8cbdb503
+:END:
+The following implementations are availabe as nix packages:
+- sbcl
+- abcl
+- ecl
+- ccl
+- clasp-common-lisp
+- gcl (GNU Common Lisp)
+- clisp
+- roswell
+
+**** Nix OS
+You can add the implementation packge to your =environment.systemPacakges= to install it system wide.
+
+For dealing with external libraries. You shoud include the =.dev= suffix to the library name to make sure the library path is added to the search path. for example for openssl you should add the package =openssl.dev= to your system packages
+
+**** Home Manager
+For dealing with external libraries. you need to add the absolute path of the required libraries to the =LD_LIBRARY_PATH= environment variable. While you can do that on your home environent level, it is highly not recommended. A work around is to wrap your implementation package with a simple shell script to make sure the installed libraries are added to =LD_LIBRARY_PATH= for your implementation. Here's an example for sbcl but you can do the same for the other implementations or for roswell.
+
+#+begin_src nix
+#+end_src
+
+**** Nix Shell
+We included a =flake.nix= file that you can use by running the command =nix develop= to enter a shell were you can get started right away with all the available implementations.
+
+The =LD_LIBRARY_PATH= should be set to include the absolute path for the libraries needed. To do so we use the helper functions =makeLibraryPath= to build the path for us and set it in our development shell.
+
+*** Guix
+:PROPERTIES:
+:ID:       aa50b926-ae64-4447-badb-49a63cfff374
+:END:
+The following implementations are availabe as guix packages:
+- sbcl
+- abcl
+- ecl
+- ccl
+- gcl
+- clasp-cl
+- clisp
+- roswell
+
+**** Guix OS
+**** Guix Home
+**** Guix Shell
+We included a =manifest.scm= file that you can use by running the command =guix shell -m manifest.scm= to enter a shell were you can get started with all the available implementations and tools mentioned in this guide.
+* Init file
+
 
 * REPL
 Normally, running the command for you implementation will get you into the REPL. If you are using Roswell, running the command =ros run= will get you into the REPL for the default implementation or you can specify a specific implementation by running the command =ros run -L <your-implementation>=

@@ -15,7 +15,7 @@
 (setq inferior-lisp-program "sbcl")
 
 ;; Choose either 'sly or 'slime
-(setq lisp-repl 'slime)
+(setq lisp-repl 'sly)
 
 ;; Sly and Slime have conflicting  configurations.
 ;; That's why when we install one we have to uninstall the other
@@ -24,7 +24,8 @@
  ((eq lisp-repl 'sly)
   (message "Removing SLIME and installing Sly")
   (remove-hook 'lisp-mode-hook 'slime-lisp-mode-hook)
-  (use-package sly :ensure t))
+  (use-package sly :ensure t)
+  (use-package sly-repl-ansi-color :ensure t))
  ;; Use Slime for Interaction with the REPL
  ((eq lisp-repl 'slime)
   (message "Removing Sly and installing SLIME")

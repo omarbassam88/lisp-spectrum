@@ -13,6 +13,8 @@ Scheme is a standard that aims to be very minimalistic in nature. That leads to 
 ** Videos
 - [[https://www.youtube.com/playlist?list=PL7BcsI5ueSNFPCEisbaoQ0kXIDX9rR5FF][playlist: SICP Structure and Interpretation of Computer Programs]]
 - [[https://www.youtube.com/playlist?list=PLgyU3jNA6VjRMB-LXXR9ZWcU3-GCzJPm0][playlist: Introduction to the scheme programming language]]
+- [[https://www.youtube.com/watch?v=OyfBQmvr2Hc][video: William Byrd "The Most Beautiful Program Ever Written"]]
+
 ** Community
 
 * Standards
