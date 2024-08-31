@@ -1,0 +1,52 @@
+#+title: Janet
+#+author: Omar Bassam
+#+date: [2024-08-30 Wed]
+#+startup:  nonum
+
+* Resources
+- [[https://janet-lang.org/][Official Website]]
+
+** Documentation
+- [[https://janet-lang.org/docs/index.html][Official Documentation]]
+- [[https://janet-lang.org/api/index.html][Core API]]
+- [[https://janetdocs.com/][Janet Docs]]
+
+** Books
+- [[https://janet.guide/][Janet for Mortals]]
+
+** Videos
+- [[https://www.youtube.com/watch?v=f5KZHGGogbc][Janet: A Practical, Embeddable Lisp - System Crafters Live!]]
+
+** Community
+- [[https://github.com/ahungry/awesome-janet][Awesome Janet]]
+
+* Installation
+
+** Debian/Ubuntu
+** Arch
+** Nix
+** Guix
+
+* Editor Configuration
+** Emacs
+*** janet-mode or janet-ts-mode
+- [[https://github.com/ALSchwalm/janet-mode][janet-mode]]
+- [[https://github.com/sogaiu/janet-ts-mode][janet-ts-mode]]
+
+*** janet-emacs-trial-kit
+- [[https://github.com/sogaiu/janet-emacs-trial-kit/tree/master][github repo]]
+
+*** ajrepl
+- [[https://github.com/sogaiu/ajrepl][github repo]]
+
+*** ijanet-mode
+- [[https://github.com/SerialDev/ijanet-mode][github repo]]
+* Dependencies and Project Management
+** JPM
+Janet Project Manager
+*** Installation
+* EcoSystem
+* Notable Projects
+
+
+

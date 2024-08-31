@@ -18,6 +18,8 @@ The Lisps we will be exploring:
 - [[file:clojure/][Clojure]]
   - ClojureScript
   - Fennel
+  - [[file:janet/][Janet]]
+  - Jank
 
 * Why Lisps
 ** Syntax
