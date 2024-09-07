@@ -31,8 +31,13 @@
 ;; Paredit for structural editing
 (use-package paredit
   :ensure t
-  :hook ((janet-mode arepl-mode)
-	 . paredit-mode)
+  :hook ((janet-mode ajrepl-mode)
+	 . (lambda ()
+	     (paredit-mode 1)
+	     (setq ;; To use # for comments
+	      paredit-comment-prefix-code "#"
+	      paredit-comment-prefix-margin "#"
+	      paredit-comment-prefix-toplevel "#")))
   :config
   (defun +fix-paredit-@ ()
     (when (char-equal ?@ (char-before (- (point) 2)))
