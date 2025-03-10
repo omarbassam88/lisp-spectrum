@@ -21,6 +21,7 @@ Common Lisp is the modern, multi-paradigm, high-performance, compiled, ANSI-stan
 ** Videos
 - [[https://www.youtube.com/watch?v=4NO83wZVT0A&t=1789s][Practical Common Lisp]]
 - [[https://www.youtube.com/watch?v=IrmHp1rRQ68][Common Lisp Object Standard]]
+- [[https://www.youtube.com/watch?v=cKK-Y1-jAHM&t=10046s][freecodecamp: Lisp in Four Hours for Beginners]]
 
 ** Community
 - [[https://www.reddit.com/r/Common_Lisp/][Common Lisp Subreddit]]

@@ -7,6 +7,8 @@ This project aims to explore the extensive spectrum of the Lisp family of langua
 
 The Lisps we will be exploring:
 - [[file:common-lisp/][Common Lisp]]
+  - uLisp
+  - Emacs Lisp
 - [[file:scheme/][Scheme]]
   - Chez Scheme
     - Racket
@@ -15,6 +17,7 @@ The Lisps we will be exploring:
   - [[file:gambit/][Gambit Scheme]]
     - Gerbil Scheme
   - [[file:guile/][Guile Scheme]]
+  - LIPS
 - [[file:clojure/][Clojure]]
   - ClojureScript
   - Fennel
